@@ -1,0 +1,235 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Bowen}{Song}{ 
+\href{mailto:sbowen@bu.edu}{sbowen@bu.edu} | 857.244.1271 | Boston MA
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Boston University}
+\descript{Master of Science in \\Electrical and Computer Engineering}
+\location{Graduated 05/2019 | Boston MA \\ Thesis: Scalable String Reconciliation By Recursive Content-Dependent Shingling}
+
+\sectionsep
+
+\subsection{University of Victoria}
+\descript{B.ENG in Electrical Engineering}
+\location{Graduated 08/2017 | Victoria BC, CAN}
+Conc. in Wireless Comm. and Radar\\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github: \href{https://github.com/Bowenislandsong}{\underline{Bowenislandsong}} \\
+%{\custombold{Bowenislandsong}} \\
+LinkedIn: \href{https://www.linkedin.com/in/songbowen/}{\underline{songbowen}} \\
+ORCID: \href{https://orcid.org/0000-0002-5071-3880}{\underline{0000-0002-5071-3880}}
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Graduate}
+Cloud Computing \textbullet Advanced Data Structure \textbullet
+Machines Learning \textbullet
+Product Design
+\sectionsep
+
+\subsection{Undergraduate}
+Wireless Communication \textbullet Radar \textbullet Digital Signal, Image, and Video Processing \textbullet Optimization \textbullet Error Control Coding
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+GO \textbullet{} C++ \textbullet{} Java \textbullet{} Python \textbullet{} Matlab \\
+\LaTeX\ \textbullet{} C\# \textbullet{} VB.NET \textbullet{} Shell \\ 
+\subsection{Cloud Related}
+AWS \textbullet{} gcloud \textbullet{} Openshift \textbullet{} Kubernetes \textbullet Docker \textbullet JaergerTracing \textbullet Ceph
+\subsection{Operating Systems}
+Linux (Fedora, Ubuntu, CentOS) \textbullet Mac OS
+\subsection{Database}
+DB2 \textbullet MongoDB \textbullet CockroachDB
+\sectionsep
+\section{Hobbies}
+Marathon Running \textbullet Hiking \textbullet Kayaking \textbullet Seafood Eating \textbullet Cross Country Driving \textbullet Running for 10KM almost everyday since 2015
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Software Project Available on Github}
+
+\runsubsection{Thesis: Set and String Reconciliation}
+\descript{| C++ \& Python}
+\location{05/2018 – 05/2019 | Boston University NISLAB}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Designed and implemented a bandwidth-efficient file synchronization protocol (RCDS) for distributed systems that outperforms \emph{rsync} for frequent updates.
+\item \href{https://github.com/Bowenislandsong/cpisync.git}{Github: \underline{Bowenislandsong/cpisync}} | \href{https://github.com/String-Reconciliation-Ditributed-System}{ \underline{String-Reconciliation-Ditributed-System}}
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Distributed Computing}
+\descript{| Python \& Java }
+\location{09/2017 - 04/2018 | Product Design}
+\begin{tightemize}
+\item Lead a group of 7 to create a FaaS model serverless cloud platform using public/personal computation power based on lease/use financial model
+\item Github: \href{https://github.com/dfunc-serverless}{\underline{dfunc-serverless}} | \href{https://github.com/Bowenislandsong/Distributivecom}{\underline{Distributivecom}}
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Machine Learning Language Checker}
+\descript{| Java}
+\location{09/2017 – 12/2017 | Advanced Data Structure}
+\begin{tightemize}
+\item Cooperated in a group of five and investigated Hashmaps, B-trees, Trie data structures as performance enhancement options for n-gram model
+\item Github: \href{https://github.com/Bowenislandsong/project_ec504}{\underline{Bowenislandsong/project\_ec504}}
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     WORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Work Experience and Projects}
+\runsubsection{RedHat, OpenShift}
+\descript{| OpenShift Intern}
+\location{05/2019 – 08/2019 | Boston MA}
+Maintaining Kubernetes scheduler and developing new scheduling algorithms
+\sectionsep
+
+\runsubsection{University of Victoria, Propagation Lab}
+\descript{| Researcher}
+\location{05/2017 – 08/2017 | Victoria BC, Canada}
+Investigated LFM Radar and Time Compression-Overlap Add DSP technique and implemented Radar System with DSP enhancement on SDR
+\sectionsep
+
+\runsubsection{HELLA Innenleuchten-Systeme GmbH}
+\descript{| Praktikant}
+\location{01/2017 – 04/2017 | Wembach, Germany}
+\begin{tightemize}
+\item Developed multi-point access flat storage program for managing company resource by designing a user-friendly collaborative system
+\item Designed Auto-Quality control tests in Body Control Modules for RGB modules
+\item Investigated LIN BUS Network Communication protocol with Vector CANoe
+\end{tightemize}
+\sectionsep
+
+\runsubsection{ISM Canada - An IBM Company}
+\descript{| Software Developer}
+\location{05/2016 – 08/2016 | Victoria BC, Canada}
+Worked as part of a full scale software development team of eight professionals and enlisted in life cycles of multiple software development processes including client query, sprint planning, implementation, and maintenance
+\sectionsep
+
+\runsubsection{Western Digital Corporation, Firmware Lab}
+\descript{| Trainee}
+\location{09/2015 – 12/2015 | Ayutthaya, Thailand}
+Worked with product testing team on product firmware reliability tests and focused on designing software program replacing manual firmware update testing procedure
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Societies \& Certificates} 
+Global Community Mentor | University of Victoria, Victoria BC, Canada\\
+Mustard Seed Hunger Fight | The Mustard Seed Street Church, Victoria BC, Canada\\
+Occupational First Aid Level 1 \textbullet
+APEGBC Member\textbullet Municipal TaiChi Master \textbullet Level 10 Piano Certificate \textbullet Olympic Second Level Swimmer
+\sectionsep
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
